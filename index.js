@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function(req, res) {
 	res.send('test')
-	});
+});
 
 app.get('/users', function(req, res) {
   //searching in db 
