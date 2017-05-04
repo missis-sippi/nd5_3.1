@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 
 const app = express();
-const url = 'mongodb://localhost:3000/mongoStart';
+const url = 'mongodb://localhost:27017/mongoStart';
 let database;
 
 app.use(logger('dev'));
@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/users', function(req, res) {
-  //searching in db 
+  //searching in db
   database.collection('users').find().toArray(function(err, items) {
     if(err) res.sendStatus(500)
     res.json(items)
