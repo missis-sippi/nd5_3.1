@@ -40,6 +40,7 @@ MongoClient.connect(url, function(err, db) {
 						else {
 							console.log(`Нет таких документов`);
 						}
+						
 						collection.remove();
 						db.close();
 					});
